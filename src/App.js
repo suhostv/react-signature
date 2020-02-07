@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './containers/header'
+import Main from './containers/main';
+import AppContext, {useAppContext} from "./context";
+import mockedData from './mocked-info';
+import './styles/app.css';
 
 function App() {
+  const data = useAppContext();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <AppContext value={data}>
+        <Header/>
+        <Main/>
+      </AppContext>
     </div>
   );
 }
