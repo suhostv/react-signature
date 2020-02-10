@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Header from './containers/header'
+import Header from './containers/header';
 import Main from './containers/main';
-import AppContext, {useAppContext} from "./context";
+import AppContext from "./context";
 import mockedData from './mocked-info';
 import './styles/app.css';
 

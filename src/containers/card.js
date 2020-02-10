@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import {useAppContext} from "../context";
 import Icon from '../components/icon';
-import { faPen, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-import '../styles/card.css'
+import { faPen, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import '../styles/card.css';
 import Button from '../components/button';
 
 const fieldOptions = {
@@ -14,14 +14,12 @@ export default function Card({ cardData }) {
   const { setAppData, atLeastOneChecked, deleteItemById } = useAppContext();
   
   const onCheckboxChange = (e) => {
-    setAppData(cardData.id, 'isChecked', e.target.checked)
+    setAppData(cardData.id, 'isChecked', e.target.checked);
   }
   
   const onDeleteCard = () => {
     deleteItemById(cardData.id);
   }
-
-  console.warn(cardData.pictureHref)
 
   return (
     <div className="card" style={{

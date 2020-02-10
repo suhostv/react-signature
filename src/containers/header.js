@@ -1,8 +1,8 @@
 import React from 'react';
 import Icon from '../components/icon';
 import Button from '../components/button';
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import '../styles/header.css'
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import '../styles/header.css';
 
 export default function Header({ 
   checkedItemsCounter, 
