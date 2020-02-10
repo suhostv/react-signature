@@ -1,12 +1,12 @@
 import React, { createContext, useContext } from 'react';
 import mockedData from './mocked-info'
 
-const AppContext = createContext(mockedData);
+const AppContext = createContext();
 const useAppContext = () => useContext(AppContext);
 
-export default function AppContexts({ children, value }) {
+export default function AppContexts({ children, ...props }) {
   return (
-    <AppContext.Provider value={value}>
+    <AppContext.Provider value={{...props}}>
       { children }
     </AppContext.Provider>
   )

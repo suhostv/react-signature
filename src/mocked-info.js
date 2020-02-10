@@ -1,4 +1,4 @@
-export default [
+const mockedData = [
   {
     sentByAdmin: false,
     installedByUser: false,
@@ -62,4 +62,6 @@ export default [
     isChecked: false,
     id: 'd9235093-34d1-4ccd-a67f-a2c739a369f2'
   }
-]
+];
+
+export default mockedData;

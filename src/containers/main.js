@@ -3,11 +3,12 @@ import Card from './card'
 import {useAppContext} from "../context";
 
 export default function Main() {
-  const data = useAppContext();
+  const { appData } = useAppContext();
+  console.warn({appData})
 
   return (
     <div className="main">
-      { data.map(item => (<Card cardData={item} key={item.id}/>))}
+      { appData.map(item => (<Card cardData={item} key={item.id}/>))}
     </div>
   )
 }
