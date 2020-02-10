@@ -3,6 +3,7 @@ import {useAppContext} from "../context";
 import Icon from '../components/icon';
 import { faPen, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import '../styles/card.css'
+import Button from '../components/button';
 
 const fieldOptions = {
   true: 'YES',
@@ -20,8 +21,12 @@ export default function Card({ cardData }) {
     deleteItemById(cardData.id);
   }
 
+  console.warn(cardData.pictureHref)
+
   return (
-    <div className="card">
+    <div className="card" style={{
+        backgroundImage: `url(${cardData.pictureHref})`,
+      }}>
       <div 
         className='card__hover-container' 
         style={atLeastOneChecked ? {opacity: 1} : {}}
@@ -43,11 +48,7 @@ export default function Card({ cardData }) {
               </span>
             </div>
             <div className='card__hover-container--footer'>
-              <button>
-                <a href="https://google.com">
-                  Use
-                </a>
-              </button>
+              <Button link="https://google.com" text='Use'/>
               <div className='icon-container'>
                 <Icon icon={faPen}/>
                 <Icon icon={faEye}/>

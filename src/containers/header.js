@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '../components/icon';
+import Button from '../components/button';
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import '../styles/header.css'
 
@@ -28,18 +29,20 @@ export default function Header({
         <input type='checkbox' id='checkbox' checked={isEveryItemChecked} onChange={onToggleChecksOfAllCards}/>
         <label htmlFor='checkbox'>Selected ({checkedItemsCounter})</label>
         <Icon icon={faTimes} onClick={onDeleteAllChecks}/>
-        <button onClick={onDeleteChecked}>
-          Delete ({checkedItemsCounter})
-        </button>
+        <Button 
+          onClick={onDeleteChecked} 
+          classValue='delete-button'
+          text={`Delete (${checkedItemsCounter})`}
+        />
       </>
       : 
       <>
         <h4>Signature List</h4>
-        <button>
-          <a href="https://google.com">
-            Create a Signature
-          </a>
-        </button>
+        <Button 
+          link='https://google.com'
+          classValue='create-button'
+          text='Create a Signature'
+        />
       </>
     }
     </div>
