@@ -11,7 +11,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 229px;
+    height: 17vw;
     border: 1px solid lightgray;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     margin: 0.5em;
@@ -71,14 +71,16 @@
     cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .card {
         width: calc(50% - 1em);
+        height: 25vw;
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 700px) {
     .card {
         width: calc(100% - 1em);
+        height: 50vw;
     }
 }
